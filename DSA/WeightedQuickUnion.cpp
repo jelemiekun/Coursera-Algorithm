@@ -2,32 +2,31 @@
 #include <iostream>
 
 WeightedQuickUnion::WeightedQuickUnion(const int size) 
-	: id(nullptr), idSize(nullptr), size(nullptr) {
+	: id(nullptr), idSize(nullptr), size(0) {
 	if (size <= 0) {
 		std::cout << "Size must be positive!" << '\n';
 		return;
 	}
 
-	this->size = new int;
-	*this->size = size;
+	this->size = size;
 	
-	id = new int[*this->size];
-	idSize = new int[*this->size];
+	id = new int[this->size];
+	idSize = new int[this->size];
 
-	for (int i = 0; i < *this->size; i++) {
+	for (int i = 0; i < this->size; i++) {
 		id[i] = i;
-		idSize[i] = 0;
+		idSize[i] = 1;
 	}
 }
 
 WeightedQuickUnion::~WeightedQuickUnion() {
-	delete id;
-	delete idSize;
-	delete size;
+	delete[] id;
+	delete[] idSize;
 }
 
 int WeightedQuickUnion::findRoot(int i) {
 	while (i != id[i]) {
+		id[i] = id[id[i]];
 		i = id[i];
 	}
 	return i;

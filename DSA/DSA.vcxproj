@@ -130,10 +130,12 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="QuickFind.cpp" />
     <ClCompile Include="QuickUnion.cpp" />
+    <ClCompile Include="WeightedQuickUnion.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="QuickFind.h" />
     <ClInclude Include="QuickUnion.h" />
+    <ClInclude Include="WeightedQuickUnion.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

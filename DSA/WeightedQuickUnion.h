@@ -3,7 +3,7 @@ class WeightedQuickUnion {
 private:
 	int* id;
 	int* idSize;
-	int* size;
+	int size;
 
 public:
 	WeightedQuickUnion(const int size);

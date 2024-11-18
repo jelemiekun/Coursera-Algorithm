@@ -12,5 +12,7 @@ public:
 	const bool& isConnected(const int& p, const int& q);
 
 	void makeUnion(const int& p, const int& q);
+
+	int findLargestNumberInASet(const int& n);
 };
 
