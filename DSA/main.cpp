@@ -84,6 +84,17 @@ static void selectionSort(int arr[], const int& size) {
 	printArray(arr, size);
 }
 
+static void insertionSort(int arr[], const int& size) {
+	printArray(arr, size);
+
+	for (int i = 1; i < size; ++i) {
+		int key = arr[i];
+		int j = i - 1;
+	}
+
+	printArray(arr, size);
+}
+
 static void arrays() {
 	int arr[] = { 42, 17, 8, 93, 56, 21, 11, 37, 70, 5, 64, 32, 19, 27, 85, 12, 40, 6, 50, 74 };
 	int size = sizeof(arr) / sizeof(arr[0]);
